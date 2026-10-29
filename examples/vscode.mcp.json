@@ -1,0 +1,22 @@
+{
+  "inputs": [
+    { "type": "promptString", "id": "contabo-client-id", "description": "Contabo Client ID" },
+    { "type": "promptString", "id": "contabo-client-secret", "description": "Contabo Client Secret", "password": true },
+    { "type": "promptString", "id": "contabo-api-user", "description": "Contabo API user (email)" },
+    { "type": "promptString", "id": "contabo-api-password", "description": "Contabo API password", "password": true }
+  ],
+  "servers": {
+    "contabo": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/TO/contabo-mcp/src/index.js"],
+      "env": {
+        "CONTABO_CLIENT_ID": "${input:contabo-client-id}",
+        "CONTABO_CLIENT_SECRET": "${input:contabo-client-secret}",
+        "CONTABO_API_USER": "${input:contabo-api-user}",
+        "CONTABO_API_PASSWORD": "${input:contabo-api-password}",
+        "CONTABO_READ_ONLY": "1"
+      }
+    }
+  }
+}

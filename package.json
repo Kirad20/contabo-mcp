@@ -1,11 +1,21 @@
 {
   "name": "contabo-mcp",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
-  "description": "MCP server exposing the full Contabo API (generated from its OpenAPI spec)",
+  "description": "MCP server exposing the full Contabo API (VPS, storage, DNS, firewalls, networks...) generated from its OpenAPI spec",
   "type": "module",
   "main": "src/index.js",
   "bin": { "contabo-mcp": "src/index.js" },
-  "scripts": { "start": "node src/index.js" },
+  "files": ["src", "docs", "examples", "README.md", "LICENSE"],
+  "engines": { "node": ">=18.17" },
+  "repository": { "type": "git", "url": "git+https://github.com/Kirad20/contabo-mcp.git" },
+  "homepage": "https://github.com/Kirad20/contabo-mcp#readme",
+  "bugs": { "url": "https://github.com/Kirad20/contabo-mcp/issues" },
+  "keywords": ["mcp", "model-context-protocol", "contabo", "vps", "cloud", "claude", "ai-agent"],
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node test/smoke.mjs",
+    "docs": "node scripts/gen-docs.mjs"
+  },
   "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0" }
 }

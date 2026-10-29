@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "contabo": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/TO/contabo-mcp/src/index.js"],
+      "env": {
+        "CONTABO_CLIENT_ID": "YOUR_CLIENT_ID",
+        "CONTABO_CLIENT_SECRET": "YOUR_CLIENT_SECRET",
+        "CONTABO_API_USER": "you@example.com",
+        "CONTABO_API_PASSWORD": "YOUR_API_PASSWORD",
+        "CONTABO_READ_ONLY": "1"
+      }
+    }
+  }
+}
