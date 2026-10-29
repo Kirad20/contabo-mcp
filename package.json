@@ -1,0 +1,11 @@
+{
+  "name": "contabo-mcp",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "MCP server exposing the full Contabo API (generated from its OpenAPI spec)",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": { "contabo-mcp": "src/index.js" },
+  "scripts": { "start": "node src/index.js" },
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0" }
+}
